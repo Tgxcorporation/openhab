@@ -366,6 +366,24 @@ public enum HeatpumpCommandType {
             command = "cooling_stop_hours";
             itemClass = NumberItem.class;
         }
+    },
+    TYPE_TIMING_HEATING {
+        {
+            command = "timing_heating";
+            itemClass = NumberItem.class;
+        }
+    },
+    TYPE_TIMING_PUMP {
+        {
+            command = "timing_pump";
+            itemClass = NumberItem.class;
+        }
+    },
+    TYPE_TIMING_WARMWATER {
+        {
+            command = "timing_warmwater";
+            itemClass = NumberItem.class;
+        }
     };
 
     /** Represents the heatpump command as it will be used in *.items configuration */
@@ -381,7 +399,7 @@ public enum HeatpumpCommandType {
     }
 
     /**
-     * 
+     *
      * @param bindingConfig command string e.g. state, temperature_solar_storage,..
      * @param itemClass class to validate
      * @return true if item class can bound to heatpumpCommand
