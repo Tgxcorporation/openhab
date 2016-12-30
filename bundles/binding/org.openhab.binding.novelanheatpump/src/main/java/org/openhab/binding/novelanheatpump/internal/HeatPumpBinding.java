@@ -181,6 +181,10 @@ public class HeatPumpBinding extends AbstractActiveBinding<HeatPumpBindingProvid
                     HeatpumpCommandType.TYPE_HEATPUMP_SOLAR_STORAGE);
             handleEventType(new DecimalType((double) heatpumpValues[28] / 10),
                     HeatpumpCommandType.TYPE_TEMPERATURE_EXTERNAL_SOURCE);
+            handleEventType(new DecimalType((double) heatpumpValues[67] / 1), HeatpumpCommandType.TYPE_TIMING_HEATING);
+            handleEventType(new DecimalType((double) heatpumpValues[39] / 1), HeatpumpCommandType.TYPE_TIMING_PUMP);
+            handleEventType(new DecimalType((double) heatpumpValues[38] / 1),
+                    HeatpumpCommandType.TYPE_TIMING_WARMWATER);
             handleEventType(new StringType(formatHours(heatpumpValues[56])),
                     HeatpumpCommandType.TYPE_HOURS_COMPRESSOR1);
             handleEventType(new DecimalType((double) heatpumpValues[57]), HeatpumpCommandType.TYPE_STARTS_COMPRESSOR1);
